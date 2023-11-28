@@ -190,7 +190,7 @@ let remainingBalls = balls.length;
 
 function updateBallCount() {
   remainingBalls = balls.filter(ball => ball.exists).length;
-  ballcount.textContent = Ball count: ${remainingBalls};
+  ballcount.textContent = 'Ball count: ${remainingBalls}';
 }
 
 function loop() {
