@@ -166,6 +166,26 @@ while (balls.length < 25) {
   balls.push(ball);
 }
 
+const evilCircle = new EvilCircle(width / 2, height / 2);
+
+window.addEventListener("keydown", (e) => {
+  switch (e.key) {
+    case "a":
+      evilCircle.x -= evilCircle.velX;
+      break;
+    case "d":
+      evilCircle.x += evilCircle.velX;
+      break;
+    case "w":
+      evilCircle.y -= evilCircle.velY;
+      break;
+    case "s":
+      evilCircle.y += evilCircle.velY;
+      break;
+  }
+});
+
+
 function loop() {
    ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
    ctx.fillRect(0, 0,  width, height);
